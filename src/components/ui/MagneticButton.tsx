@@ -6,7 +6,7 @@ interface MagneticButtonProps {
   href?: string;
   onClick?: () => void;
   className?: string;
-  download?: boolean;
+  download?: boolean | string;
 }
 
 /**

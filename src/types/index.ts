@@ -20,6 +20,7 @@ export interface Profile {
   email: string;
   linkedin: string;
   github: string;
+  resume: string;
   summary: string;
   roles: string[];
 }

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { profile, socials, stats } from '@/data/portfolio';
 import Icon from '@/components/ui/Icon';
 import MagneticButton from '@/components/ui/MagneticButton';
+import profilePhoto from '@/assets/profile-cutout.webp';
 import './Hero.css';
 
 /** Rotating role text under the name. */
@@ -19,20 +20,18 @@ function RoleRotator() {
 
   return (
     <span className="hero__role-rotator">
-      {profile.roles.map((role, i) => (
+      <AnimatePresence mode="wait">
         <motion.span
-          key={role}
+          key={profile.roles[index]}
           className="hero__role-item"
-          initial={false}
-          animate={{
-            y: i === index ? 0 : 28,
-            opacity: i === index ? 1 : 0,
-          }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ y: '100%', opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: '-100%', opacity: 0 }}
+          transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
         >
-          {role}
+          {profile.roles[index]}
         </motion.span>
-      ))}
+      </AnimatePresence>
     </span>
   );
 }
@@ -53,6 +52,7 @@ export default function Hero() {
   return (
     <section id="home" className="hero">
       <div className="container hero__inner">
+        <div className="hero__content">
         <motion.span
           className="hero__badge"
           variants={fadeUp}
@@ -115,7 +115,14 @@ export default function Hero() {
           <MagneticButton className="btn btn--primary" onClick={() => go('projects')}>
             View my work <Icon name="arrow" size={18} />
           </MagneticButton>
-          <MagneticButton className="btn btn--ghost" onClick={() => go('contact')}>
+          <MagneticButton
+            className="btn btn--ghost"
+            href={profile.resume}
+            download="Manjula_V_Mahesh_Resume.pdf"
+          >
+            Download CV <Icon name="download" size={18} />
+          </MagneticButton>
+          <MagneticButton className="btn btn--text" onClick={() => go('contact')}>
             Get in touch
           </MagneticButton>
         </motion.div>
@@ -153,6 +160,26 @@ export default function Hero() {
               <span className="hero__stat-label">{s.label}</span>
             </div>
           ))}
+        </motion.div>
+        </div>
+
+        <motion.div
+          className="hero__portrait"
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <motion.div
+            className="hero__portrait-glow"
+            animate={{ scale: [1, 1.08, 1], opacity: [0.5, 0.8, 0.5] }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <div className="hero__portrait-ring">
+            <div className="hero__portrait-frame">
+              <img src={profilePhoto} alt={profile.name} loading="eager" />
+              <span className="hero__portrait-fade" />
+            </div>
+          </div>
         </motion.div>
       </div>
 
