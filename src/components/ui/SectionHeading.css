@@ -4,13 +4,17 @@
 }
 
 .section-index {
-  display: inline-block;
+  display: block;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   letter-spacing: 0.3em;
   color: var(--cyan);
   margin-bottom: 16px;
   text-transform: uppercase;
+}
+
+.section-title {
+  display: block;
 }
 
 .section-title {
