@@ -1,0 +1,117 @@
+.footer {
+  position: relative;
+  padding: 80px 0 40px;
+  border-top: 1px solid var(--border);
+}
+
+.footer__cta {
+  text-align: center;
+  padding: 64px 32px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 72px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(124, 108, 255, 0.16), transparent 60%),
+    var(--surface);
+}
+
+.footer__cta-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--cyan);
+}
+
+.footer__cta-title {
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  margin: 16px 0 32px;
+}
+
+.footer__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: var(--grad-primary);
+  color: #07070d;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer__cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px var(--glow-indigo);
+}
+
+.footer__grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.footer__role {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer__links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.footer__links button {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  transition: color 0.25s;
+}
+.footer__links button:hover {
+  color: var(--text);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__socials a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: all 0.25s;
+}
+.footer__socials a:hover {
+  color: #07070d;
+  background: var(--grad-primary);
+  transform: translateY(-3px);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}

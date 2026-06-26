@@ -1,0 +1,123 @@
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.35s, transform 0.35s;
+}
+
+.project:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-8px);
+}
+
+.project__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.project__number {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.85;
+}
+
+.project__role {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cyan);
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.project__name {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+
+.project__desc {
+  color: var(--text-muted);
+  margin-bottom: 22px;
+}
+
+.project__highlights {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.project__highlights li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.project__highlights svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--indigo);
+}
+
+.project__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.project__tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: var(--text-muted);
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+}
+
+.project__shine {
+  position: absolute;
+  bottom: -50%;
+  left: -20%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-indigo), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.project:hover .project__shine {
+  opacity: 0.45;
+}
+
+@media (max-width: 880px) {
+  .projects__list {
+    grid-template-columns: 1fr;
+  }
+  .project {
+    padding: 28px;
+  }
+}

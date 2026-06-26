@@ -1,0 +1,124 @@
+.timeline {
+  position: relative;
+  padding-left: 56px;
+}
+
+.timeline__line {
+  position: absolute;
+  left: 19px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  transform-origin: top;
+  background: linear-gradient(var(--indigo), var(--cyan), transparent);
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 36px;
+}
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__dot {
+  position: absolute;
+  left: -56px;
+  top: 6px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #07070d;
+  background: var(--grad-primary);
+  box-shadow: 0 0 0 6px var(--bg), 0 6px 20px var(--glow-indigo);
+}
+
+.timeline__card {
+  padding: 28px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.timeline__card:hover {
+  border-color: var(--border-strong);
+  transform: translateX(6px);
+}
+
+.timeline__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.timeline__role {
+  font-size: 1.25rem;
+}
+
+.timeline__company {
+  color: var(--cyan);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.timeline__period {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.timeline__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+}
+
+.timeline__points {
+  margin-top: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.timeline__points li {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  font-size: 0.96rem;
+  color: var(--text-muted);
+}
+
+.timeline__bullet {
+  flex-shrink: 0;
+  margin-top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--glow-cyan);
+}
+
+@media (max-width: 560px) {
+  .timeline {
+    padding-left: 40px;
+  }
+  .timeline__dot {
+    left: -40px;
+    width: 32px;
+    height: 32px;
+  }
+  .timeline__line {
+    left: 15px;
+  }
+  .timeline__card {
+    padding: 22px;
+  }
+}

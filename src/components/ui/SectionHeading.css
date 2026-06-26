@@ -1,0 +1,35 @@
+.section-heading {
+  margin-bottom: 64px;
+  max-width: 720px;
+}
+
+.section-index {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--cyan);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+}
+
+.section-subtitle {
+  margin-top: 18px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 620px;
+}
+
+.section-rule {
+  margin-top: 28px;
+  height: 2px;
+  width: 100%;
+  transform-origin: left;
+  background: var(--grad-primary);
+  border-radius: 2px;
+}
