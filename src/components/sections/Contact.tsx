@@ -16,7 +16,7 @@ const channels = [
   {
     icon: 'github',
     label: 'GitHub',
-    value: 'vmaheshmanjula',
+    value: 'vmahimanjula',
     href: profile.github,
   },
 ];

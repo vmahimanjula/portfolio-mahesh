@@ -20,7 +20,7 @@ export const profile: Profile = {
   phone: '+91 93814 13368',
   email: 'vmaheshmanjula@gmail.com',
   linkedin: 'https://www.linkedin.com/in/manjula-v-mahesh-082b31411',
-  github: 'https://github.com/vmaheshmanjula',
+  github: 'https://github.com/vmahimanjula',
   summary:
     'Front-End Developer with hands-on experience in React.js, TypeScript, JavaScript, Redux Toolkit, React Router, Vite, HTML, CSS and Tailwind CSS. Skilled in building responsive web applications, reusable component architectures, API integration, state management, authentication systems and enterprise-grade user interfaces. Experienced in collaborating with cross-functional teams to develop scalable solutions and improve application performance. Passionate about modern frontend development, user experience and writing clean, maintainable code.',
   roles: [
@@ -42,7 +42,7 @@ export const navLinks: NavLink[] = [
 ];
 
 export const socials: SocialLink[] = [
-  { label: 'GitHub', href: 'https://github.com/vmaheshmanjula', icon: 'github' },
+  { label: 'GitHub', href: 'https://github.com/vmahimanjula', icon: 'github' },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/manjula-v-mahesh-082b31411',
